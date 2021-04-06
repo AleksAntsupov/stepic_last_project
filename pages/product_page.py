@@ -23,3 +23,4 @@ class ProductPage(BasePage):
         book_price_added_in_basket = self.browser.find_element(*ProductPageLocators.BOOK_PRICE_ADDED_IN_BASKET).text
         # book_price_added_in_basket_t = book_price_added_in_basket.text
         assert book_price == book_price_added_in_basket, "Prices are not equal"
+    
