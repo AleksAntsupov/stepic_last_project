@@ -14,8 +14,10 @@ class LoginPage(BasePage):
     def should_be_login_form(self):
         assert self.is_element_present(*LoginPageLocators.LOGIN_USER_NAME), "Form for login username not found"
         assert self.is_element_present(*LoginPageLocators.LOGIN_PASSWORD), "Form for login password not found"
+        assert self.is_element_present(*LoginPageLocators.LOGIN_SUBMIT), "Button for login click not found"
 
     def should_be_register_form(self):
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_EMAIL), "Form for registration email not found"
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_PASSWORD1), "Form for registration password first not found"
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_PASSWORD2), "Form for registration password second not found"
+        assert self.is_element_present(*LoginPageLocators.REGISTRATION_SUBMIT), "Button for registration click not found"
