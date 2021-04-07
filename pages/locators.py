@@ -18,3 +18,4 @@ class ProductPageLocators():
     BOOK_ADDED_IN_BASKET = (By.CSS_SELECTOR, ".alertinner > strong")
     BOOK_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     BOOK_PRICE_ADDED_IN_BASKET = (By.CSS_SELECTOR, ".alert-info .alertinner > p strong")
+    BOOKS_MESSAGE_SUCCESS = (By.CSS_SELECTOR, "#messages .alert-success")

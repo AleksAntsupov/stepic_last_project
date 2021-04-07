@@ -24,3 +24,8 @@ class ProductPage(BasePage):
         # book_price_added_in_basket_t = book_price_added_in_basket.text
         assert book_price == book_price_added_in_basket, "Prices are not equal"
     
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.BOOKS_MESSAGE_SUCCESS),"Success message is present!"
+    
+    def should_not_be_success_message_two(self):
+        assert self.is_disappeared(*ProductPageLocators.BOOKS_MESSAGE_SUCCESS),"Success message is present! Helped is_disappeared"
