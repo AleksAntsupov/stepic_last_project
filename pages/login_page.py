@@ -3,19 +3,23 @@ from .locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
+    #Должна быть страница логина
     def should_be_login_page(self):
         self.should_be_login_url()
         self.should_be_login_form()
         self.should_be_register_form()
-
+    
+    #Мы на странице логина
     def should_be_login_url(self):
         assert "login" in self.browser.current_url, "Login is not in URL"
-
+    
+    #Видно форму логина
     def should_be_login_form(self):
         assert self.is_element_present(*LoginPageLocators.LOGIN_USER_NAME), "Form for login username not found"
         assert self.is_element_present(*LoginPageLocators.LOGIN_PASSWORD), "Form for login password not found"
         assert self.is_element_present(*LoginPageLocators.LOGIN_SUBMIT), "Button for login click not found"
-
+    
+    #Видно форму регистрации
     def should_be_register_form(self):
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_EMAIL), "Form for registration email not found"
         assert self.is_element_present(*LoginPageLocators.REGISTRATION_PASSWORD1), "Form for registration password first not found"
