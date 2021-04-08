@@ -29,6 +29,11 @@ class BasePage():
         # alert = self.browser.switch_to.alert
         # alert.accept()
     
+    #Пользователь залогинен
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented,probably unauthorised user"
+    
+    
     #Должна быть ссылка на логин
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
